@@ -17,7 +17,7 @@ extension UIViewLoading where Self : UIView {
   static func loadFromNib(nibNameOrNil: String? = nil) -> Self {
     let nibName = nibNameOrNil ?? self.className
     let nib = UINib(nibName: nibName, bundle: nil)
-    return nib.instantiateWithOwner(self, options: nil).first as! Self
+    return nib.instantiate(withOwner: self, options: nil).first as! Self
   }
   
   static private var className: String {

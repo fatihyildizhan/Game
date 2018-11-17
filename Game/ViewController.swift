@@ -19,13 +19,13 @@ class ViewController: UIViewController {
   var pauseView  = PauseView.loadFromNib()
   
   @IBAction func Pause(sender: UIButton) {
-    pauseView.btnResume.addTarget(self, action: #selector(resume(_:)), forControlEvents: .TouchUpInside)
+    pauseView.btnResume.addTarget(self, action: #selector(resumer(sender:)), for: .touchUpInside)
     // set place on view
     view.addSubview(pauseView)
     
   }
   
-  func resume(sender:UIButton) {
+    @objc func resumer(sender:UIButton) {
     pauseView.removeFromSuperview()
   }
 }
