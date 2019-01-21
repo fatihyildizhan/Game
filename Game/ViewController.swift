@@ -21,8 +21,7 @@ class ViewController: UIViewController {
   @IBAction func Pause(sender: UIButton) {
     pauseView.btnResume.addTarget(self, action: #selector(resumer(sender:)), for: .touchUpInside)
     // set place on view
-    view.addSubview(pauseView)
-    
+    view.addSubview(pauseView)  
   }
   
     @objc func resumer(sender:UIButton) {
