@@ -22,7 +22,7 @@ extension UIViewLoading where Self : UIView {
   
   static private var className: String {
     let className = "\(self)"
-    let components = className.characters.split{$0 == "."}.map ( String.init )
+    let components = className.split{$0 == "."}.map ( String.init )
     return components.last!
     
   }
